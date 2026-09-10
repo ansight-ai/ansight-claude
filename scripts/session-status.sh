@@ -5,8 +5,6 @@
 # Generated from scripts/plugins/claude/scripts/session-status.sh; edit the
 # template in the Ansight source repository, not this copy.
 
-expected="0.40.0"
-
 # Extract one scalar from pretty-printed JSON without jq (first match wins).
 json_field() {
   sed -n "s/.*\"$1\":[[:space:]]*\"\{0,1\}\([^\",}]*\)\"\{0,1\}.*/\1/p" | head -n 1
@@ -23,9 +21,12 @@ if [ -z "$version" ]; then
   exit 0
 fi
 
+# The skills describe the latest public CLI, so the useful signal is whether an update exists.
 compat=""
-if [ "${expected%.*}" != "${version%.*}" ]; then
-  compat=" Plugin skills target CLI ${expected%.*}.x but CLI $version is installed; prefer 'ansight <command> help' where they disagree and suggest updating the older side."
+update=$(ansight update check --json 2>/dev/null)
+if [ "$(printf '%s' "$update" | json_field isUpdateAvailable)" = "true" ]; then
+  latest=$(printf '%s' "$update" | json_field latestVersion)
+  compat=" CLI update available ($version -> $latest); offer 'ansight update apply' with the user's approval before relying on newer options."
 fi
 
 running=$(ansight host status --json 2>/dev/null | json_field isRunning)

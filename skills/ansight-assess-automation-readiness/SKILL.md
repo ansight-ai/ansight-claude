@@ -1,12 +1,11 @@
 ---
 name: ansight-assess-automation-readiness
 description: Audit and score an app's Ansight integration strength and automation readiness. Use for a requested evidence-backed readiness score, automation-ID coverage assessment, blocker analysis, comparison, or prioritized remediation plan; do not use for routine app inspection or workspace authoring.
-compatibility: Ansight CLI 0.40.x; compare with ansight version --json
 ---
 
 ## Claude Code plugin integration
 
-Run Ansight CLI commands with Claude Code’s Bash tool on the machine that owns the resident host. If this session cannot execute commands or reach that host, explain the missing prerequisite and do not claim a live inspection succeeded. The plugin’s session-start note reports the CLI, host, and connected-session state it found; re-check with the commands below before acting on it. This skill’s `compatibility` line names the CLI minor version its commands describe: compare it with `ansight version --json`; if the installed CLI is older, report the gap and offer `ansight update apply` with the user’s approval; if it is newer, say the plugin is behind, suggest `claude plugin update ansight`, and treat `ansight <command> help` as the authority wherever it disagrees with this skill. A remote workspace or cloud agent does not automatically have access to the developer’s local host. Resolve relative helper paths from this skill’s directory. When this workflow references another bundled skill, read its local SKILL.md completely before following it.
+Run Ansight CLI commands with Claude Code’s Bash tool on the machine that owns the resident host. If this session cannot execute commands or reach that host, explain the missing prerequisite and do not claim a live inspection succeeded. The plugin’s session-start note reports the CLI, host, and connected-session state it found; re-check with the commands below before acting on it. These skills describe the latest public Ansight CLI: if the session-start note or `ansight update check --json` reports an available update, offer `ansight update apply` with the user’s approval before relying on newer options, and treat `ansight <command> help` as the authority wherever it disagrees with this skill. A remote workspace or cloud agent does not automatically have access to the developer’s local host. Resolve relative helper paths from this skill’s directory. When this workflow references another bundled skill, read its local SKILL.md completely before following it.
 
 
 # Assess Ansight Automation Readiness
