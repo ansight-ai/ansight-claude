@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}\"/scripts/session-status.sh",
+            "timeout": 20,
+            "statusMessage": "Checking Ansight CLI and host"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "ansight",
+  "owner": {
+    "name": "Ansight",
+    "url": "https://www.ansight.ai"
+  },
+  "plugins": [
+    {
+      "name": "ansight",
+      "source": "./",
+      "description": "Let your agent build, test, and prove your app works: 27 Ansight CLI skills, a verifier subagent, and a session-start readiness check for mobile apps.",
+      "version": "0.40.0",
+      "category": "developer-tools",
+      "keywords": [
+        "ansight",
+        "mobile",
+        "debugging",
+        "testing",
+        "verification",
+        "ios",
+        "android",
+        "maui",
+        "react-native",
+        "flutter",
+        "capacitor"
+      ],
+      "homepage": "https://www.ansight.ai",
+      "license": "MIT",
+      "author": {
+        "name": "Ansight",
+        "url": "https://www.ansight.ai"
+      }
+    }
+  ]
+}
