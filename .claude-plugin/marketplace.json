@@ -1,5 +1,6 @@
 {
   "name": "ansight",
+  "description": "Ansight for Claude Code: runtime evidence, live app verification, and repeatable tests for mobile apps.",
   "owner": {
     "name": "Ansight",
     "url": "https://www.ansight.ai"
