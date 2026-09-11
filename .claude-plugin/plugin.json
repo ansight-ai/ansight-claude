@@ -1,6 +1,6 @@
 {
   "name": "ansight",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Let your agent build, test, and prove your app works: 27 Ansight CLI skills, a verifier subagent, and a session-start readiness check for mobile apps.",
   "author": {
     "name": "Ansight",

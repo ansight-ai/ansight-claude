@@ -23,8 +23,8 @@ CLI annotation requires the Ansight CLI and a session available from local histo
 
 - A UI-anchored annotation also requires a captured screenshot frame; a semantic target requires a corresponding persisted visual-tree snapshot.
 - Direct diagnostic annotation tools such as `ansight_inject_annotation` require an available diagnostic tool connection and a resolvable session. A live-only tool path also requires an initialized SDK session.
-- If new live evidence must first be captured, use the Ansight Operate Live App skill; if the app lacks the SDK integration, follow `https://www.ansight.ai/skills/ansight-install.md`.
-- If the CLI cannot access the session, follow `https://www.ansight.ai/skills/ansight-cli-setup.md`.
+- If new live evidence must first be captured, use the Ansight Operate Live App skill; if the app lacks the SDK integration, report the blocker and follow the installation skill only when installation is in scope: `https://www.ansight.ai/skills/ansight-install.md`.
+- If the CLI cannot access the session, report the blocker. Use setup only within the requested scope: `https://www.ansight.ai/skills/ansight-cli-setup.md`.
 
 Do not install or reconnect the SDK solely to add metadata to an existing recorded or imported session.
 

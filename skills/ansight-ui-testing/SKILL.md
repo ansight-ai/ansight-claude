@@ -32,9 +32,9 @@ A test is agentic; a task is deterministic; a trigger is event-driven; Trends tu
 
 ## Prerequisites And Scope
 
-Authoring and validating a workspace require the Ansight CLI, but they do not require a connected app. If the executable or local host is not ready, follow `https://www.ansight.ai/skills/ansight-cli-setup.md`.
+Authoring and validating a workspace require the Ansight CLI, but they do not require a connected app. If the executable or local host is not ready, report the missing prerequisite. Use setup only within the requested scope: `https://www.ansight.ai/skills/ansight-cli-setup.md`.
 
-Running a test or task, verifying a trigger against live events, or capturing new evidence requires a development or QA build with an initialized Ansight SDK integration and the matching App ID. If the integration is missing, follow `https://www.ansight.ai/skills/ansight-install.md`. Do not require the SDK merely to edit definitions or extract a draft from an existing recorded session.
+Running a test or task, verifying a trigger against live events, or capturing new evidence requires a development or QA build with an initialized Ansight SDK integration and the matching App ID. If the integration is missing, report the blocker. Only when installation is in scope, follow `https://www.ansight.ai/skills/ansight-install.md`. Do not require the SDK merely to edit definitions or extract a draft from an existing recorded session.
 
 Workspace authoring does not authorize execution. Run a test or task, connect a trigger, rebuild Trends history, export a sanitized archive, or synchronize cloud history only when the user requested that state-changing operation or verification.
 
@@ -304,9 +304,11 @@ Manually author unsupported long presses or multi-touch gestures; a tap without
 a stable selector remains unresolved. Type-check, rediscover, and run the task
 against a connected development build before relying on it.
 
-### Debug A Failed Task Before Repairing It
+### Debug Or Repair Only When In Scope
 
-Preserve the failed task result and its evidence before editing or replaying.
+Use this procedure only for requested debugging or repair, or to validate work
+authored in this request. For execution-only requests, report the terminal result
+and stop. Preserve the failed task result and its evidence before editing or replaying.
 Start with the first failed tool call rather than the final exception or a nearby
 application log:
 

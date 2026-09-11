@@ -4,14 +4,14 @@
     {
       "source": "agents/ansight-annotate-session/SKILL.md",
       "destination": "skills/ansight-annotate-session/SKILL.md",
-      "sourceSha256": "f3c24b27fc6238dab68be97f44753633b6956b6c661406ea3b1125503894b250",
-      "sha256": "e749cacb9be88c025b4c4a276e4ab56d11cfca74edb3ac29f22b66df0888cd55"
+      "sourceSha256": "bb926d705de4bb4c19d12d700d58823b040f6ee0808974a5e7c545f93dc56510",
+      "sha256": "1fd254d15ef73dcac3b3cf201c4e2f5430a8c9c25b3610cb92f5b0b65f7f424b"
     },
     {
       "source": "agents/ansight-app-inspection.md",
       "destination": "skills/ansight-app-inspection/SKILL.md",
-      "sourceSha256": "1713c2262aa68327bc5d67eb5534ff14a859db5ab6ce25b05a82dfd871640cab",
-      "sha256": "1da64a2d130b64a760a33b2da5b56eeaa2c1ef171a065bcbfdd0ca8c4147ee6a"
+      "sourceSha256": "9fd77189476a43427684c84454027af2610547ec27bd9796bd570249f6c937fa",
+      "sha256": "a832ca9cc32037b736b689087331fe671b3b0a8e0250cba75a7f122f94049471"
     },
     {
       "source": "android/ansight-app-inspection-android.md",
@@ -64,8 +64,8 @@
     {
       "source": "ansight-cli-setup.md",
       "destination": "skills/ansight-cli-setup/SKILL.md",
-      "sourceSha256": "538c1653a29f7f2c036b18442a72be3a2f7315ea57d5a0ad7b24131433d419ad",
-      "sha256": "696e15435c06fa567ecf3c17fc3abb87e27abe498545d1a0caf9f323ae66adff"
+      "sourceSha256": "cf0f9f7681771454adb7f8c3bdc575b6c67e89b553e3483096d075099700999a",
+      "sha256": "f15f138ff03dde31a68040588d1229d8971ed8a9650c92c0a14e48c594f4dde5"
     },
     {
       "source": "android/ansight-create-remote-tool-android.md",
@@ -148,26 +148,26 @@
     {
       "source": "agents/ansight-investigate-session/SKILL.md",
       "destination": "skills/ansight-investigate-session/SKILL.md",
-      "sourceSha256": "be542efcbdd3c15b0a77e949c971882b7c7ce0624bb0d542926788c8dec5b21b",
-      "sha256": "32e496f638766b604d5427c4f3156c505da52a610979c564807f30137807d8c6"
+      "sourceSha256": "732a039e02909561715f7298e2b451e5cc2a7c5f374b151a272d67ad68b8d32e",
+      "sha256": "fe06ceb506253f49dd92ec2b2b591c8e498d06819d646409757bbf191cf2e06e"
     },
     {
       "source": "agents/ansight-operate-live-app/SKILL.md",
       "destination": "skills/ansight-operate-live-app/SKILL.md",
-      "sourceSha256": "06f221c04d3c0dae4399b2f71a90c988584ce55ef8aaa995623005f088715b9e",
-      "sha256": "16709b8dac3a4004f94b2d1076635ef177e4cacdafceb4858f7c16e3696a420d"
+      "sourceSha256": "59a40b783f344c0d8e296e780f99ed2b6012fadf4a470ab57f00191f66368309",
+      "sha256": "9f4ccff6b96c7b7a0b0e63048588a8fabf3290538ea0846953ba5356f51a3cc1"
     },
     {
       "source": "agents/ansight-ui-testing/SKILL.md",
       "destination": "skills/ansight-ui-testing/SKILL.md",
-      "sourceSha256": "cd1dde7b10ae8a4f4194b6c23ba7f1a6760147d21d8334a0c9cb8af2dd169ad8",
-      "sha256": "8d7b5dc80ba2bd845d50ad36dbd0427e97aceaa9aa37a5b897af7c9d03697a55"
+      "sourceSha256": "14cec1597fd202d356200ffa416843699a1749554ed87a727d5c553c288af9d2",
+      "sha256": "eb4d0c4ef138892084b92f50eb5d68de3446fd68138044b4d2887c2c3a847649"
     },
     {
       "source": "agents/ansight-use-remote-app-tools/SKILL.md",
       "destination": "skills/ansight-use-remote-app-tools/SKILL.md",
-      "sourceSha256": "b345c91256519a0943c70edbdd4f6ab04c4ca907b52252148dc4b3df2b44cfe3",
-      "sha256": "39a9c12bb8bb83be80a6d3cd7cc87a48971b4cf2f20ca2cffacb3493ab7cd379"
+      "sourceSha256": "22323882e03f9cc0fbf567ba33947e4fd895f305eebc1c7bb058511b3bdea260",
+      "sha256": "743584e4b1e04bd79531372f7e93f7fbaa852e1e0e556383450517ce9e6006ed"
     }
   ]
 }

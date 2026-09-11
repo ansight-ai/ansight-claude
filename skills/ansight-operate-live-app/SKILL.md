@@ -21,8 +21,8 @@ Establish one exact live session, observe before acting, perform the smallest au
 
 Live operation requires the Ansight SDK to be installed, initialized, and enabled in the app's development or QA build. Keep SDK enrollment, capture, and remote capabilities excluded from protected builds unless the app's documented policy explicitly permits them.
 
-- If the app does not contain a working Ansight SDK integration, follow `https://www.ansight.ai/skills/ansight-install.md` before attempting live operation.
-- If the `ansight` executable, resident host, or device dependencies are not ready, follow `https://www.ansight.ai/skills/ansight-cli-setup.md`.
+- If the app does not contain a working Ansight SDK integration, report the blocker. Only when installation is in scope, follow `https://www.ansight.ai/skills/ansight-install.md` before attempting live operation.
+- If the `ansight` executable, resident host, or device dependencies are not ready, report the missing prerequisite. Use setup only within the requested scope: `https://www.ansight.ai/skills/ansight-cli-setup.md`.
 - If a development build is connected but the requested work needs app-internal tools, follow the Ansight Remote App Tools skill after resolving the session.
 
 Do not install or modify the SDK merely because no session is currently connected. First distinguish a missing integration from an app that is stopped, using the wrong build configuration, or temporarily disconnected.
@@ -65,7 +65,7 @@ devices. Reusing a connected session leaves its window state unchanged.
    ansight host status --json
    ```
 
-   If the CLI or workstation is not configured, follow the Ansight CLI Setup skill. If no host is running and live control is required, run `ansight host run` in a durable terminal and leave it attached.
+   If the CLI or workstation is not configured, report the blocker; use the Ansight CLI Setup skill only when setup is in scope. If no host is running and live control is required, run `ansight host run` in a durable terminal and leave it attached.
 
 2. Inspect devices only when the app must be launched or the user named a target:
 
@@ -194,8 +194,10 @@ If it enters a query and selects a result, invoke it with the query directly—d
 not focus/type first and then have the task repeat those steps. If a user explicitly
 wants manual exploration, keep that route instead of running the same task afterward.
 
-Failures report whether input succeeded and whether evidence is available. Do not
-blindly repeat a timed-out action; it may already have executed. An `exit` command
+On failure, report the error, available evidence, and partial effects. Allow one
+evidence-supported correction or transient retry per requested operation, only
+when it cannot duplicate input. If execution is uncertain, observe once and stop
+if still unresolved. Diagnose or repair only when requested. An `exit` command
 or stdin EOF detaches without stopping the app or host. Ctrl+C cancels the connection.
 If the installed CLI/host does not support `app interact`, use the semantic workflow
 below and report the limitation; do not restart a shared host without authorization.

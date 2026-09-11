@@ -2,7 +2,7 @@
 
 Let your agent build, test, and prove your app works. This plugin gives Claude Code runtime evidence from your mobile app through [Ansight CLI](https://www.ansight.ai): inspect logs, screenshots, visual trees, network activity, and app state; interact with a connected development build; verify changes against the running app; and author repeatable tests and tasks.
 
-Maintained by Ansight. Plugin version `0.1.0`; the bundled skills describe the latest public Ansight CLI.
+Maintained by Ansight. Plugin version `0.1.1`; the bundled skills describe the latest public Ansight CLI.
 
 ## What is included
 

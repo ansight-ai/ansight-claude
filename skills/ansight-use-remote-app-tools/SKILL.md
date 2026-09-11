@@ -28,7 +28,7 @@ Remote-tool use requires:
 - runtime policy and local guards configured to expose the permitted maximum policy; and
 - a live SDK session connected to the resident host.
 
-If the SDK integration is missing, follow `https://www.ansight.ai/skills/ansight-install.md`. If the CLI or resident host is not ready, follow `https://www.ansight.ai/skills/ansight-cli-setup.md`. If the app is installed but not connected, follow the Ansight Operate Live App skill.
+If the SDK integration is missing, report the blocker. Only when installation is in scope, follow `https://www.ansight.ai/skills/ansight-install.md`. If the CLI or resident host is not ready, report the missing prerequisite. Use setup only within the requested scope: `https://www.ansight.ai/skills/ansight-cli-setup.md`. If the app is installed but not connected, follow the Ansight Operate Live App skill.
 
 An empty or blocked catalog does not by itself prove that installation is missing. It may reflect build gating, omitted tool packages, current app state, pairing limits, or a runtime guard. Report the observed catalog and denial state before proposing an integration change; do not enable remote tools in a protected build merely to complete an inspection.
 
@@ -170,10 +170,15 @@ For files, preferences, secure storage, databases, and reflection, remain inside
 
 ## Handle Failure As Evidence
 
+Report errors and partial effects. Allow one evidence-supported recovery per
+requested operation, shared with live operation, only when it cannot duplicate a
+mutation. If execution is uncertain, read state once and stop if still unresolved.
+Diagnose or repair only when requested.
+
 - A denial means the tool is unavailable under the current app state or guard. Report its code and reason.
 - A schema error means the call was malformed; correct it only from the returned schema.
 - A prerequisite failure means the dependent call must not proceed.
-- A disconnected session requires fresh session and catalog discovery before retrying.
+- A disconnect is a blocker. Rediscover the session and catalog only for a safe retry within that allowance.
 - A successful tool response proves only the operation described by its result schema; verify broader product outcomes separately.
 
 ## Report The Tool Trail

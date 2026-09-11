@@ -1,6 +1,6 @@
 ---
 name: ansight-cli-setup
-description: Prepare a developer workstation or agent to use the Ansight CLI by verifying the executable and dependencies, starting or reusing the resident host, and proving structured discovery. Use when setup is requested or those prerequisites are not ready; do not use for ordinary app operation once they work.
+description: Prepare a developer workstation or agent to use the Ansight CLI by verifying the executable and dependencies, starting or reusing the resident host, and proving structured discovery. Use when setup or setup troubleshooting is requested; do not use for ordinary app operation once they work.
 ---
 
 ## Claude Code plugin integration
@@ -106,7 +106,10 @@ Make the `ansight` executable the canonical local interface, verify its dependen
 
 8. Report the executable used, doctor result, host state, data directory, discovered app/session identifiers, and any manual pairing or persistent-terminal step that remains.
 
-## Troubleshooting
+## Troubleshooting Within Requested Setup
+
+Use the check matching the observed error. If it does not resolve the blocker,
+report the result and required next step; do not work through unrelated repairs.
 
 - CLI device launches show simulator/emulator windows by default. Pass `--headless` on each device-launching command when windowless operation is requested; `--json`, `--silent`, and CI do not imply it. This skips Simulator.app on iOS and adds `-no-window` for new Android emulators without closing existing windows or changing physical devices. See [headless device launches](https://www.ansight.ai/docs/cli/commands#headless-device-launches).
 - After an update or local build install, compare `ansight version --json` and `ansight host status --json`. A running host keeps its loaded code, so new launch options require an updated host too. Coordinate an authorized restart rather than interrupting a shared host automatically.

@@ -15,7 +15,7 @@ Use these bundled files for the canonical skill URLs referenced below; keep publ
 
 # Investigate An Ansight Session
 
-Build a timestamped evidence trail from one exact session before reading source code or proposing a cause. Treat missing evidence as a finding, not permission to fill gaps with assumptions.
+Build a timestamped evidence trail from one exact session before reading source code or proposing a cause. Report an unresolved cause when evidence is missing or no concrete lead remains; do not repair the app or diagnostic infrastructure.
 
 Use `--json` throughout. Keep timestamps in UTC and preserve source IDs such as frame IDs, snapshot IDs, request IDs, annotation IDs, channel IDs, and artifact snapshot IDs.
 
@@ -24,8 +24,8 @@ Use `--json` throughout. Keep timestamps in UTC and preserve source IDs such as 
 Recorded-session investigation requires the Ansight CLI or another exposed Ansight diagnostic surface and a session available from local history or an imported archive. The target app does not need to remain installed, connected, or currently integrated with the SDK when retained evidence is sufficient.
 
 - For a live investigation, the app's development or QA build must contain an initialized Ansight SDK and be connected to the host. Use the Ansight Operate Live App skill to establish that session.
-- If the SDK integration is missing and new live evidence must be captured, follow `https://www.ansight.ai/skills/ansight-install.md`.
-- If the CLI or resident host cannot access local or imported sessions, follow `https://www.ansight.ai/skills/ansight-cli-setup.md`.
+- If the SDK integration is missing and new live evidence must be captured, report the blocker. Only when installation is in scope, follow `https://www.ansight.ai/skills/ansight-install.md`.
+- If the CLI or resident host cannot access local or imported sessions, report the blocker. Use setup only within the requested scope: `https://www.ansight.ai/skills/ansight-cli-setup.md`.
 
 Do not require or install the SDK merely to inspect an existing recorded or imported session.
 

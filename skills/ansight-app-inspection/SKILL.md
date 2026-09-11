@@ -97,7 +97,7 @@ When source-code clues are unavailable, use the Ansight app/session metadata and
 1. Classify the requested outcome and select one primary skill from the table.
 2. Inspect repository markers only when a platform skill may be required.
 3. Add at most the directly needed platform or evidence helper skills.
-4. Let the selected specialist route to CLI setup or SDK installation if its actual prerequisites are missing.
+4. Report missing prerequisites. Route to CLI setup or SDK installation only when setup or installation is already within the requested scope.
 5. Stop following this router and continue with the selected skill or deliberate combination.
 
 If platform detection remains ambiguous, generic evidence skills can still work with standard Ansight surfaces. Ask the user to choose a platform only before a platform-specific operation would materially change the workflow.
